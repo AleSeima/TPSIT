@@ -19,12 +19,12 @@ typedef struct canzone{
     int val;
 }Canzone;
 
-void leggiFile(Canzone playlist[],FILE *fp,int *cnt){//*cnt è il numero di canzoni
+void leggiFile(Canzone playlist[],FILE *fp,int *cnt){//*cnt Ã¨ il numero di canzoni
     char lettera; // lettera che legge nel file (lettera per lettera)
     char parola[100]; //parola completa (successione di tutte le lettere prima della ',')
     int indice=0; // indice che serve a capire cosa sto leggendo
     while(fscanf(fp,"%c",&lettera)!=EOF){//legge lettera
-        if(lettera==','){// se è arrivata alla fine della parola
+        if(lettera==','){// se Ã¨ arrivata alla fine della parola
             parola[strlen(parola)]='\0';//aggiunge alla fine della parola completa '0'
             /*
             INDICE:
